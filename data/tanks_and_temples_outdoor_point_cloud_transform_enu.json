@@ -1,0 +1,283 @@
+[
+{
+  "model": "geoaligner.pointcloudset",
+  "pk": 72,
+  "fields": {
+    "name": "Barn",
+    "point_cloud_file": "point_clouds/Barn.parquet",
+    "latitude": 37.392664142633386,
+    "longitude": -121.96199094611531,
+    "transform": {
+      "rotation": {
+        "_x": 0.5213338044735968,
+        "_y": 0.47771441710826085,
+        "_z": 0.4777144171082609,
+        "_w": 0.5213338044735969
+      },
+      "translation": {
+        "x": 9.3,
+        "y": 9.7,
+        "z": 2.2
+      },
+      "scale": {
+        "x": 6.66,
+        "y": 6.66,
+        "z": 6.66
+      }
+    }
+  }
+},
+{
+  "model": "geoaligner.pointcloudset",
+  "pk": 73,
+  "fields": {
+    "name": "Courthouse",
+    "point_cloud_file": "point_clouds/Courthouse.parquet",
+    "latitude": 37.4870631316516,
+    "longitude": -122.22967140561393,
+    "transform": {
+      "rotation": {
+        "_x": 0.7069990853988242,
+        "_y": -0.012340714939826858,
+        "_z": -0.012340714939826969,
+        "_w": 0.7069990853988243
+      },
+      "translation": {
+        "x": 1.6,
+        "y": -12.2,
+        "z": 1.7
+      },
+      "scale": {
+        "x": 12.45,
+        "y": 12.45,
+        "z": 12.45
+      }
+    }
+  }
+},
+{
+  "model": "geoaligner.pointcloudset",
+  "pk": 74,
+  "fields": {
+    "name": "Family",
+    "point_cloud_file": "point_clouds/Family.parquet",
+    "latitude": 37.348499568209384,
+    "longitude": -121.9386443134906,
+    "transform": {
+      "rotation": {
+        "_x": -0.03635561008013684,
+        "_y": 0.6937063653048389,
+        "_z": -0.7183539701426352,
+        "_w": 0.037647336314331696
+      },
+      "translation": {
+        "x": -7.1,
+        "y": 1.6,
+        "z": 1.9
+      },
+      "scale": {
+        "x": 5.55,
+        "y": 5.55,
+        "z": 5.55
+      }
+    }
+  }
+},
+{
+  "model": "geoaligner.pointcloudset",
+  "pk": 75,
+  "fields": {
+    "name": "Francis",
+    "point_cloud_file": "point_clouds/Francis.parquet",
+    "latitude": 37.77128029232098,
+    "longitude": -122.46659091081595,
+    "transform": {
+      "rotation": {
+        "_x": 0.38511795495802315,
+        "_y": 0.5930296457757824,
+        "_z": 0.5930296457757825,
+        "_w": 0.3851179549580232
+      },
+      "translation": {
+        "x": -3.9,
+        "y": -4.6,
+        "z": 1.5
+      },
+      "scale": {
+        "x": 9.31,
+        "y": 9.31,
+        "z": 9.31
+      }
+    }
+  }
+},
+{
+  "model": "geoaligner.pointcloudset",
+  "pk": 76,
+  "fields": {
+    "name": "Horse",
+    "point_cloud_file": "point_clouds/Horse.parquet",
+    "latitude": 37.34769446329359,
+    "longitude": -121.93827335999498,
+    "transform": {
+      "rotation": {
+        "_x": 0.05547895863492368,
+        "_y": 0.7049270069651072,
+        "_z": 0.7049270069651074,
+        "_w": 0.055478958634923685
+      },
+      "translation": {
+        "x": -2.6,
+        "y": -0.9,
+        "z": 2.1
+      },
+      "scale": {
+        "x": 14.2,
+        "y": 14.2,
+        "z": 14.2
+      }
+    }
+  }
+},
+{
+  "model": "geoaligner.pointcloudset",
+  "pk": 77,
+  "fields": {
+    "name": "Ignatius",
+    "point_cloud_file": "point_clouds/Ignatius.parquet",
+    "latitude": 37.3488883798771,
+    "longitude": -121.94021110597701,
+    "transform": {
+      "rotation": {
+        "_x": -0.6532814824381882,
+        "_y": -0.27059805007309845,
+        "_z": 0.2705980500730985,
+        "_w": 0.6532814824381883
+      },
+      "translation": {
+        "x": 1.9,
+        "y": 0.2,
+        "z": 1.9
+      },
+      "scale": {
+        "x": 4.61,
+        "y": 4.61,
+        "z": 4.61
+      }
+    }
+  }
+},
+{
+  "model": "geoaligner.pointcloudset",
+  "pk": 78,
+  "fields": {
+    "name": "Lighthouse",
+    "point_cloud_file": "point_clouds/Lighthouse.parquet",
+    "latitude": 36.951457150859845,
+    "longitude": -122.02670723801154,
+    "transform": {
+      "rotation": {
+        "_x": 0.12278780396897289,
+        "_y": -0.6963642403200189,
+        "_z": -0.696364240320019,
+        "_w": 0.1227878039689729
+      },
+      "translation": {
+        "x": 1,
+        "y": 4.8,
+        "z": 1.9
+      },
+      "scale": {
+        "x": 9.23,
+        "y": 9.23,
+        "z": 9.23
+      }
+    }
+  }
+},
+{
+  "model": "geoaligner.pointcloudset",
+  "pk": 79,
+  "fields": {
+    "name": "Playground",
+    "point_cloud_file": "point_clouds/Playground.parquet",
+    "latitude": 37.393083612936515,
+    "longitude": -121.96214943675402,
+    "transform": {
+      "rotation": {
+        "_x": -0.5043442292812725,
+        "_y": -0.4956176937828986,
+        "_z": 0.4956176937828987,
+        "_w": 0.5043442292812726
+      },
+      "translation": {
+        "x": -4.3,
+        "y": -3,
+        "z": 0
+      },
+      "scale": {
+        "x": 12.82,
+        "y": 12.82,
+        "z": 12.82
+      }
+    }
+  }
+},
+{
+  "model": "geoaligner.pointcloudset",
+  "pk": 80,
+  "fields": {
+    "name": "Temple",
+    "point_cloud_file": "point_clouds/Temple.parquet",
+    "latitude": 37.76989160594431,
+    "longitude": -122.46854009594472,
+    "transform": {
+      "rotation": {
+        "_x": 0.5086500507968373,
+        "_y": 0.4911976443595538,
+        "_z": 0.4911976443595539,
+        "_w": 0.5086500507968374
+      },
+      "translation": {
+        "x": 1.5,
+        "y": 3.2,
+        "z": 2.3
+      },
+      "scale": {
+        "x": 18.31,
+        "y": 18.31,
+        "z": 18.31
+      }
+    }
+  }
+},
+{
+  "model": "geoaligner.pointcloudset",
+  "pk": 81,
+  "fields": {
+    "name": "Truck",
+    "point_cloud_file": "point_clouds/Truck.parquet",
+    "latitude": 37.33689032845215,
+    "longitude": -121.89434365830597,
+    "transform": {
+      "rotation": {
+        "_x": 0.36418691533816433,
+        "_y": 0.6061088109378321,
+        "_z": 0.6061088109378322,
+        "_w": 0.3641869153381644
+      },
+      "translation": {
+        "x": -0.3,
+        "y": -1,
+        "z": 1.6
+      },
+      "scale": {
+        "x": 3.32,
+        "y": 3.32,
+        "z": 3.32
+      }
+    }
+  }
+}
+]
+

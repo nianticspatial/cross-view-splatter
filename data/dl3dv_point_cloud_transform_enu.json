@@ -1,0 +1,1122 @@
+[
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 7,
+        "fields": {
+            "name": "0a485338bbdaf19ba9090b874bb36ef0599a9c9a475a382c22903cf5981c6ea6",
+            "point_cloud_file": "point_clouds/0a485338bbdaf19ba9090b874bb36ef0599a9c9a475a382c22903cf5981c6ea6.parquet",
+            "latitude": 39.76898119072101,
+            "longitude": -86.15382762698395,
+            "transform": {
+                "rotation": {
+                    "_x": 0.07845610824589173,
+                    "_y": -0.0006846760840392152,
+                    "_z": -0.008699634501766475,
+                    "_w": 0.9968793741757849
+                },
+                "translation": {
+                    "x": -1.6,
+                    "y": -19.2,
+                    "z": 1.4
+                },
+                "scale": {
+                    "x": 2.55,
+                    "y": 2.55,
+                    "z": 2.55
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 8,
+        "fields": {
+            "name": "032dee9fb0a8bc1b90871dc5fe950080d0bcd3caf166447f44e60ca50ac04ec7",
+            "point_cloud_file": "point_clouds/032dee9fb0a8bc1b90871dc5fe950080d0bcd3caf166447f44e60ca50ac04ec7.parquet",
+            "latitude": 39.77039143420219,
+            "longitude": -86.15664454232798,
+            "transform": {
+                "rotation": {
+                    "_x": 0.19118314082004986,
+                    "_y": -0.05666759690432477,
+                    "_z": -0.37415614363443506,
+                    "_w": 0.9056737659377563
+                },
+                "translation": {
+                    "x": -2.3,
+                    "y": -16.9,
+                    "z": 4.9
+                },
+                "scale": {
+                    "x": 0.76,
+                    "y": 0.76,
+                    "z": 0.76
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 9,
+        "fields": {
+            "name": "073f5a9b983ced6fb28b23051260558b165f328a16b2d33fe20585b7ee4ad561",
+            "point_cloud_file": "point_clouds/073f5a9b983ced6fb28b23051260558b165f328a16b2d33fe20585b7ee4ad561.parquet",
+            "latitude": 40.43884398282199,
+            "longitude": -79.947518,
+            "transform": {
+                "rotation": {
+                    "_x": -0.05518562580081141,
+                    "_y": 0.00839867650827042,
+                    "_z": 0.4979014683469376,
+                    "_w": 0.865435229671086
+                },
+                "translation": {
+                    "x": -4.0,
+                    "y": -18.2,
+                    "z": 1.8
+                },
+                "scale": {
+                    "x": 1.54,
+                    "y": 1.54,
+                    "z": 1.54
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 10,
+        "fields": {
+            "name": "0bfdd020cf475b9c68e4b469d1d1a2d0cad303eefe8b78fb2307855afdaac8be",
+            "point_cloud_file": "point_clouds/0bfdd020cf475b9c68e4b469d1d1a2d0cad303eefe8b78fb2307855afdaac8be.parquet",
+            "latitude": 39.76768694668058,
+            "longitude": -86.162682271164,
+            "transform": {
+                "rotation": {
+                    "_x": 0.009631758520114529,
+                    "_y": 0.025855558552856595,
+                    "_z": -0.034657914193302886,
+                    "_w": 0.9990182922767227
+                },
+                "translation": {
+                    "x": 0.3,
+                    "y": -9.6,
+                    "z": 1.6
+                },
+                "scale": {
+                    "x": 1.46,
+                    "y": 1.46,
+                    "z": 1.46
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 11,
+        "fields": {
+            "name": "1264931635e127fb905c8953cbc2deadd0c763e633af7fbd9405a61ca849710c",
+            "point_cloud_file": "point_clouds/1264931635e127fb905c8953cbc2deadd0c763e633af7fbd9405a61ca849710c.parquet",
+            "latitude": 39.82772383154713,
+            "longitude": -86.18580600000001,
+            "transform": {
+                "rotation": {
+                    "_x": -0.0367438451581546,
+                    "_y": 0.02506797630382529,
+                    "_z": -0.3906947619623805,
+                    "_w": 0.9194449898619184
+                },
+                "translation": {
+                    "x": 2.3,
+                    "y": -10.9,
+                    "z": 1.4
+                },
+                "scale": {
+                    "x": 1.27,
+                    "y": 1.27,
+                    "z": 1.27
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 12,
+        "fields": {
+            "name": "15ff83e2531668d27c92091c97d31401ce323e24ee7c844cb32d5109ab9335f7",
+            "point_cloud_file": "point_clouds/15ff83e2531668d27c92091c97d31401ce323e24ee7c844cb32d5109ab9335f7.parquet",
+            "latitude": 39.764934951954636,
+            "longitude": -86.16208554232797,
+            "transform": {
+                "rotation": {
+                    "_x": 0.005190742163827292,
+                    "_y": -0.007014885429787232,
+                    "_z": 0.5948001377222606,
+                    "_w": 0.8038262522111199
+                },
+                "translation": {
+                    "x": 3.0,
+                    "y": -17.2,
+                    "z": 1.6
+                },
+                "scale": {
+                    "x": 1.01,
+                    "y": 1.01,
+                    "z": 1.01
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 13,
+        "fields": {
+            "name": "165f5af8bfe32f70595a1c9393a6e442acf7af019998275144f605b89a306557",
+            "point_cloud_file": "point_clouds/165f5af8bfe32f70595a1c9393a6e442acf7af019998275144f605b89a306557.parquet",
+            "latitude": 41.87326575689428,
+            "longitude": -87.64936710185205,
+            "transform": {
+                "rotation": {
+                    "_x": 0.1368458115338406,
+                    "_y": -0.08201832439204593,
+                    "_z": -0.9320566157649511,
+                    "_w": 0.32529476377333766
+                },
+                "translation": {
+                    "x": 5.3,
+                    "y": -32.3,
+                    "z": 1.2
+                },
+                "scale": {
+                    "x": 1.63,
+                    "y": 1.63,
+                    "z": 1.63
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 14,
+        "fields": {
+            "name": "1d6a9ed47cce39fd1c4d18f776bcc97e507b81bde921ca596bd91b0b02b5e414",
+            "point_cloud_file": "point_clouds/1d6a9ed47cce39fd1c4d18f776bcc97e507b81bde921ca596bd91b0b02b5e414.parquet",
+            "latitude": 39.765861909565,
+            "longitude": -86.17562783393579,
+            "transform": {
+                "rotation": {
+                    "_x": -0.05699763958479773,
+                    "_y": 0.013107259222796985,
+                    "_z": -0.6339317054810895,
+                    "_w": 0.7711744689908148
+                },
+                "translation": {
+                    "x": 0.8,
+                    "y": -3.8,
+                    "z": 1.4
+                },
+                "scale": {
+                    "x": 0.69,
+                    "y": 0.69,
+                    "z": 0.69
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 15,
+        "fields": {
+            "name": "26fd23358fa11fff0fb3180ef0b65591b486e20dcf753ce4a7aae49a37e370c7",
+            "point_cloud_file": "point_clouds/26fd23358fa11fff0fb3180ef0b65591b486e20dcf753ce4a7aae49a37e370c7.parquet",
+            "latitude": 30.494126407190222,
+            "longitude": 114.532946728836,
+            "transform": {
+                "rotation": {
+                    "_x": -0.010037312971310148,
+                    "_y": -0.022544174044748733,
+                    "_z": -0.9334052245475828,
+                    "_w": 0.3579744395235963
+                },
+                "translation": {
+                    "x": -1.8,
+                    "y": -18.2,
+                    "z": 1.2
+                },
+                "scale": {
+                    "x": 0.99,
+                    "y": 0.99,
+                    "z": 0.99
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 16,
+        "fields": {
+            "name": "286239bd0d4436b747987c40f8cbfc0675bb69435d4ab19a3f73b9d816d0c09a",
+            "point_cloud_file": "point_clouds/286239bd0d4436b747987c40f8cbfc0675bb69435d4ab19a3f73b9d816d0c09a.parquet",
+            "latitude": 39.763023697323675,
+            "longitude": -86.15842545767201,
+            "transform": {
+                "rotation": {
+                    "_x": 0.06478444834829997,
+                    "_y": 0.1453857423711712,
+                    "_z": 0.8894979507276003,
+                    "_w": 0.42832155773296
+                },
+                "translation": {
+                    "x": -0.7,
+                    "y": -19.4,
+                    "z": 1.4
+                },
+                "scale": {
+                    "x": 1.72,
+                    "y": 1.72,
+                    "z": 1.72
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 17,
+        "fields": {
+            "name": "2991a75d1f0fb2b7a891d424fc2459bb954b61599b52e74a056a7acfb2998b77",
+            "point_cloud_file": "point_clouds/2991a75d1f0fb2b7a891d424fc2459bb954b61599b52e74a056a7acfb2998b77.parquet",
+            "latitude": 39.76864817765219,
+            "longitude": -86.15875710185203,
+            "transform": {
+                "rotation": {
+                    "_x": -0.09075897055611998,
+                    "_y": -0.005809918842292872,
+                    "_z": -0.22179525848240483,
+                    "_w": 0.9708428901842784
+                },
+                "translation": {
+                    "x": 7.8,
+                    "y": -27.2,
+                    "z": 1.4
+                },
+                "scale": {
+                    "x": 0.83,
+                    "y": 0.83,
+                    "z": 0.83
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 18,
+        "fields": {
+            "name": "3b16a10ec9b4ab71580958b634485a979ffd6df0d368dbbf6fc1c5ffacf46b7a",
+            "point_cloud_file": "point_clouds/3b16a10ec9b4ab71580958b634485a979ffd6df0d368dbbf6fc1c5ffacf46b7a.parquet",
+            "latitude": 39.76441095295881,
+            "longitude": -86.16189427116402,
+            "transform": {
+                "rotation": {
+                    "_x": 0.12192434810279132,
+                    "_y": 0.09947800841720045,
+                    "_z": 0.702448265549367,
+                    "_w": 0.6941217569041778
+                },
+                "translation": {
+                    "x": -4.6,
+                    "y": -10.9,
+                    "z": 1.5
+                },
+                "scale": {
+                    "x": 2.9,
+                    "y": 2.9,
+                    "z": 2.9
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 19,
+        "fields": {
+            "name": "3bb894d1933f3081134ad2d40e54de5f0636bd8b502b0a8561873bb63b0dce85",
+            "point_cloud_file": "point_clouds/3bb894d1933f3081134ad2d40e54de5f0636bd8b502b0a8561873bb63b0dce85.parquet",
+            "latitude": 39.771797230864706,
+            "longitude": -86.15356080086516,
+            "transform": {
+                "rotation": {
+                    "_x": 0.035948802637591835,
+                    "_y": -0.0012749028761515069,
+                    "_z": 0.20747922830421994,
+                    "_w": 0.9775778373274759
+                },
+                "translation": {
+                    "x": -11.7,
+                    "y": -3.3,
+                    "z": 1.4
+                },
+                "scale": {
+                    "x": 0.97,
+                    "y": 0.97,
+                    "z": 0.97
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 20,
+        "fields": {
+            "name": "4ae797d07b6d1644c9db6919c8cc8c0d28d72be45108ac7a3abf8dc21b599d83",
+            "point_cloud_file": "point_clouds/4ae797d07b6d1644c9db6919c8cc8c0d28d72be45108ac7a3abf8dc21b599d83.parquet",
+            "latitude": 39.77082665227737,
+            "longitude": -86.15949336569857,
+            "transform": {
+                "rotation": {
+                    "_x": -0.08329202546255411,
+                    "_y": -0.1144127545259146,
+                    "_z": 0.8919266963651841,
+                    "_w": 0.4294635355967101
+                },
+                "translation": {
+                    "x": -0.7,
+                    "y": -11.4,
+                    "z": 1.0
+                },
+                "scale": {
+                    "x": 0.31,
+                    "y": 0.31,
+                    "z": 0.31
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 21,
+        "fields": {
+            "name": "513e4ea2e8477b06f2b32417d5c243aec71d491cb0596a60e9fe304c635f20a1",
+            "point_cloud_file": "point_clouds/513e4ea2e8477b06f2b32417d5c243aec71d491cb0596a60e9fe304c635f20a1.parquet",
+            "latitude": 39.76878617730507,
+            "longitude": -86.16188172883598,
+            "transform": {
+                "rotation": {
+                    "_x": 0.18634480450005453,
+                    "_y": 0.15103839819153964,
+                    "_z": 0.5447070117604764,
+                    "_w": 0.8035902484765124
+                },
+                "translation": {
+                    "x": 0.8,
+                    "y": -19.5,
+                    "z": 3.1
+                },
+                "scale": {
+                    "x": 0.63,
+                    "y": 0.63,
+                    "z": 0.63
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 22,
+        "fields": {
+            "name": "54bf355ca7e08ed1bc86f5772e564ac0f92981ca25dab24d86b694e915fc4c43",
+            "point_cloud_file": "point_clouds/54bf355ca7e08ed1bc86f5772e564ac0f92981ca25dab24d86b694e915fc4c43.parquet",
+            "latitude": 39.95884757958648,
+            "longitude": -86.16012354232798,
+            "transform": {
+                "rotation": {
+                    "_x": 0.09954318532927262,
+                    "_y": -0.07083206537950326,
+                    "_z": -0.6304923297551394,
+                    "_w": 0.7665203160311621
+                },
+                "translation": {
+                    "x": 1.7,
+                    "y": -14.8,
+                    "z": 1.2
+                },
+                "scale": {
+                    "x": 1.28,
+                    "y": 1.28,
+                    "z": 1.28
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 23,
+        "fields": {
+            "name": "565553aa894be621e8b4773cac288e60ad0c2cf7edb621be62b348c9a0f78380",
+            "point_cloud_file": "point_clouds/565553aa894be621e8b4773cac288e60ad0c2cf7edb621be62b348c9a0f78380.parquet",
+            "latitude": 39.768667670730935,
+            "longitude": -86.15250727116401,
+            "transform": {
+                "rotation": {
+                    "_x": 0.13409891061291251,
+                    "_y": -0.12196438003973809,
+                    "_z": -0.7098271025585717,
+                    "_w": 0.6806523757743412
+                },
+                "translation": {
+                    "x": 3.5,
+                    "y": -14.7,
+                    "z": 1.3
+                },
+                "scale": {
+                    "x": 2.03,
+                    "y": 2.03,
+                    "z": 2.03
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 24,
+        "fields": {
+            "name": "5a69d1027b477be4d2933b765723d57b272e0ace96be7885306464d54aa2c038",
+            "point_cloud_file": "point_clouds/5a69d1027b477be4d2933b765723d57b272e0ace96be7885306464d54aa2c038.parquet",
+            "latitude": 39.7663886770095,
+            "longitude": -86.16269337301604,
+            "transform": {
+                "rotation": {
+                    "_x": -0.02774534228494932,
+                    "_y": -0.03365779160340476,
+                    "_z": 0.7708901677623435,
+                    "_w": 0.635472814755453
+                },
+                "translation": {
+                    "x": 7.0,
+                    "y": -20.2,
+                    "z": 1.2
+                },
+                "scale": {
+                    "x": 0.65,
+                    "y": 0.65,
+                    "z": 0.65
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 25,
+        "fields": {
+            "name": "6d221625614d0515fa44d59a8797a49b64f86bc775e66be22f07a66aa0a0cb3a",
+            "point_cloud_file": "point_clouds/6d221625614d0515fa44d59a8797a49b64f86bc775e66be22f07a66aa0a0cb3a.parquet",
+            "latitude": 39.767876919569545,
+            "longitude": -86.17006364418002,
+            "transform": {
+                "rotation": {
+                    "_x": 0.003911059031308351,
+                    "_y": 0.019115337807957822,
+                    "_z": -0.9657813551063679,
+                    "_w": 0.25862266259291616
+                },
+                "translation": {
+                    "x": 9.9,
+                    "y": -14.2,
+                    "z": 3.3
+                },
+                "scale": {
+                    "x": 2.61,
+                    "y": 2.61,
+                    "z": 2.61
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 26,
+        "fields": {
+            "name": "6d81c5ab0d480fd43d78b75ff372a8113ad38e2c03f1d69627c009883054d4c2",
+            "point_cloud_file": "point_clouds/6d81c5ab0d480fd43d78b75ff372a8113ad38e2c03f1d69627c009883054d4c2.parquet",
+            "latitude": 37.39135405518417,
+            "longitude": -121.98269191534402,
+            "transform": {
+                "rotation": {
+                    "_x": 0.03977703205645916,
+                    "_y": 0.05196627644621088,
+                    "_z": 0.7990306889507545,
+                    "_w": 0.5977183717671544
+                },
+                "translation": {
+                    "x": 0.4,
+                    "y": -22.4,
+                    "z": 1.0
+                },
+                "scale": {
+                    "x": 3.81,
+                    "y": 3.81,
+                    "z": 3.81
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 27,
+        "fields": {
+            "name": "7a9f97660be8f2421b37dd413c898360532f17c6447c11515e8aded2d80eb99d",
+            "point_cloud_file": "point_clouds/7a9f97660be8f2421b37dd413c898360532f17c6447c11515e8aded2d80eb99d.parquet",
+            "latitude": 39.76853047836691,
+            "longitude": -86.16945085338365,
+            "transform": {
+                "rotation": {
+                    "_x": 0.04879440008079669,
+                    "_y": 0.0015956522179714216,
+                    "_z": 0.4706006279957091,
+                    "_w": 0.8809946704406328
+                },
+                "translation": {
+                    "x": 2.1,
+                    "y": -5.8,
+                    "z": 1.3
+                },
+                "scale": {
+                    "x": 1.06,
+                    "y": 1.06,
+                    "z": 1.06
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 28,
+        "fields": {
+            "name": "85cd0e92110bcd35e826cbff16bb0e85d8117717adaf36f0698920f0fb9b2cfd",
+            "point_cloud_file": "point_clouds/85cd0e92110bcd35e826cbff16bb0e85d8117717adaf36f0698920f0fb9b2cfd.parquet",
+            "latitude": 39.76578819722282,
+            "longitude": -86.166426271164,
+            "transform": {
+                "rotation": {
+                    "_x": 0.028376193541501983,
+                    "_y": -0.12855382706488172,
+                    "_z": -0.9322906453928513,
+                    "_w": 0.33690185173140325
+                },
+                "translation": {
+                    "x": -1.7,
+                    "y": -14.1,
+                    "z": 1.5
+                },
+                "scale": {
+                    "x": 3.31,
+                    "y": 3.31,
+                    "z": 3.31
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 29,
+        "fields": {
+            "name": "8b9fb9d9f10e8c64d5034be69809465753b8ba88ef12da82afd47d38ee789934",
+            "point_cloud_file": "point_clouds/8b9fb9d9f10e8c64d5034be69809465753b8ba88ef12da82afd47d38ee789934.parquet",
+            "latitude": 39.76708448721207,
+            "longitude": -86.17878091365104,
+            "transform": {
+                "rotation": {
+                    "_x": -0.003401562034905233,
+                    "_y": -0.01186265657214891,
+                    "_z": -0.874590022157235,
+                    "_w": 0.4847060964107845
+                },
+                "translation": {
+                    "x": 2.1,
+                    "y": -6.9,
+                    "z": 1.4
+                },
+                "scale": {
+                    "x": 0.33,
+                    "y": 0.33,
+                    "z": 0.33
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 30,
+        "fields": {
+            "name": "946f49be73928469000baa5ca04d2573137c5ee6a66362bcf8d130354dca8924",
+            "point_cloud_file": "point_clouds/946f49be73928469000baa5ca04d2573137c5ee6a66362bcf8d130354dca8924.parquet",
+            "latitude": 40.43910181072042,
+            "longitude": -79.94742345767202,
+            "transform": {
+                "rotation": {
+                    "_x": 0.028463992222644962,
+                    "_y": 0.06427424124510717,
+                    "_z": 0.8553602457744249,
+                    "_w": 0.5132421192846803
+                },
+                "translation": {
+                    "x": 3.7,
+                    "y": -17.2,
+                    "z": 1.6
+                },
+                "scale": {
+                    "x": 1.81,
+                    "y": 1.81,
+                    "z": 1.81
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 31,
+        "fields": {
+            "name": "9c8c0e0fadd97abf60088f667eba058ef077a71a8c0f5a4eff2782aa97f1ceb8",
+            "point_cloud_file": "point_clouds/9c8c0e0fadd97abf60088f667eba058ef077a71a8c0f5a4eff2782aa97f1ceb8.parquet",
+            "latitude": 39.76647792359128,
+            "longitude": -86.16264610185205,
+            "transform": {
+                "rotation": {
+                    "_x": 0.020629097151576598,
+                    "_y": 0.12493347439285629,
+                    "_z": -0.9860466495997544,
+                    "_w": 0.10806512915802124
+                },
+                "translation": {
+                    "x": 5.8,
+                    "y": -20.0,
+                    "z": 1.1
+                },
+                "scale": {
+                    "x": 0.63,
+                    "y": 0.63,
+                    "z": 0.63
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 32,
+        "fields": {
+            "name": "adb95f29c15b8a89e40c17d10596679be09d7719c6f08a453facd506d056ea8b",
+            "point_cloud_file": "point_clouds/adb95f29c15b8a89e40c17d10596679be09d7719c6f08a453facd506d056ea8b.parquet",
+            "latitude": 39.759089715451076,
+            "longitude": -86.15877054232796,
+            "transform": {
+                "rotation": {
+                    "_x": 0.023577758222924662,
+                    "_y": 0.02573060798483373,
+                    "_z": 0.7368282073771063,
+                    "_w": 0.6751786563150173
+                },
+                "translation": {
+                    "x": 1.0,
+                    "y": -12.9,
+                    "z": 2.4
+                },
+                "scale": {
+                    "x": 1.14,
+                    "y": 1.14,
+                    "z": 1.14
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 33,
+        "fields": {
+            "name": "b3bf9079b442c681749f6bd95cfb0659c6d844f2228b2f4fa4b602a0e3627b9a",
+            "point_cloud_file": "point_clouds/b3bf9079b442c681749f6bd95cfb0659c6d844f2228b2f4fa4b602a0e3627b9a.parquet",
+            "latitude": 39.771232432388835,
+            "longitude": -86.159651,
+            "transform": {
+                "rotation": {
+                    "_x": 0.14172453102951144,
+                    "_y": -0.03335048452794376,
+                    "_z": -0.49689002648660807,
+                    "_w": 0.8555128310343189
+                },
+                "translation": {
+                    "x": 1.8,
+                    "y": -29.6,
+                    "z": 0.9
+                },
+                "scale": {
+                    "x": 0.63,
+                    "y": 0.63,
+                    "z": 0.63
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 34,
+        "fields": {
+            "name": "c076929db6501cf7ebe386c70e6d77ea3af844a745e794f2ec17c981c465a69b",
+            "point_cloud_file": "point_clouds/c076929db6501cf7ebe386c70e6d77ea3af844a745e794f2ec17c981c465a69b.parquet",
+            "latitude": 30.40717206193347,
+            "longitude": 114.39005745767201,
+            "transform": {
+                "rotation": {
+                    "_x": 0.06514245755614183,
+                    "_y": 0.03039815995131767,
+                    "_z": 0.19151025483884,
+                    "_w": 0.9788545522122694
+                },
+                "translation": {
+                    "x": -6.9,
+                    "y": -22.1,
+                    "z": 2.0
+                },
+                "scale": {
+                    "x": 4.39,
+                    "y": 4.39,
+                    "z": 4.39
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 35,
+        "fields": {
+            "name": "c37109a55effe0000f8e40652ca935376e75bcb2a0b56de8eabd20a26e2a0f68",
+            "point_cloud_file": "point_clouds/c37109a55effe0000f8e40652ca935376e75bcb2a0b56de8eabd20a26e2a0f68.parquet",
+            "latitude": 31.14798864226155,
+            "longitude": 121.436461271164,
+            "transform": {
+                "rotation": {
+                    "_x": -0.046214613985265794,
+                    "_y": 0.030102818868740888,
+                    "_z": 0.6208519947092273,
+                    "_w": 0.7819851855476048
+                },
+                "translation": {
+                    "x": -7.0,
+                    "y": -17.8,
+                    "z": 1.2
+                },
+                "scale": {
+                    "x": 2.49,
+                    "y": 2.49,
+                    "z": 2.49
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 36,
+        "fields": {
+            "name": "c37726ce770ac50a2cf5c0f43022f0268e26da0d777cd8e3a3418c4eed03fd94",
+            "point_cloud_file": "point_clouds/c37726ce770ac50a2cf5c0f43022f0268e26da0d777cd8e3a3418c4eed03fd94.parquet",
+            "latitude": 39.77535414383796,
+            "longitude": -86.14905108465597,
+            "transform": {
+                "rotation": {
+                    "_x": -0.011315658714011639,
+                    "_y": -0.17465561488560244,
+                    "_z": 0.7997938370202378,
+                    "_w": 0.5741926421691983
+                },
+                "translation": {
+                    "x": -4.4,
+                    "y": -18.1,
+                    "z": 1.5
+                },
+                "scale": {
+                    "x": 1.14,
+                    "y": 1.14,
+                    "z": 1.14
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 37,
+        "fields": {
+            "name": "cc08c0bdc34ddd2867705d0b17a86ec2a9d7c7926ce99070ed1fdc66a812de07",
+            "point_cloud_file": "point_clouds/cc08c0bdc34ddd2867705d0b17a86ec2a9d7c7926ce99070ed1fdc66a812de07.parquet",
+            "latitude": 39.8255090755427,
+            "longitude": -86.18509799999998,
+            "transform": {
+                "rotation": {
+                    "_x": 0.09360432330050555,
+                    "_y": 0.049622180901319646,
+                    "_z": 0.3172483674546886,
+                    "_w": 0.9424061455494578
+                },
+                "translation": {
+                    "x": 10.9,
+                    "y": -10.0,
+                    "z": 1.9
+                },
+                "scale": {
+                    "x": 2.47,
+                    "y": 2.47,
+                    "z": 2.47
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 38,
+        "fields": {
+            "name": "cd9c981eeb4a9091547af19181b382698e9d9eee0a838c7c9783a8a268af6aee",
+            "point_cloud_file": "point_clouds/cd9c981eeb4a9091547af19181b382698e9d9eee0a838c7c9783a8a268af6aee.parquet",
+            "latitude": 39.7686041914887,
+            "longitude": -86.15971581349197,
+            "transform": {
+                "rotation": {
+                    "_x": 0.09056663020559903,
+                    "_y": 0.10714706584931488,
+                    "_z": 0.936754513181716,
+                    "_w": 0.32063713728570375
+                },
+                "translation": {
+                    "x": -27.8,
+                    "y": -12.4,
+                    "z": 1.4
+                },
+                "scale": {
+                    "x": 1.34,
+                    "y": 1.34,
+                    "z": 1.34
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 39,
+        "fields": {
+            "name": "d3812aad538261e7f73c75762ff55f23b468bcc76f376d52ac86ca6cf3c44b4b",
+            "point_cloud_file": "point_clouds/d3812aad538261e7f73c75762ff55f23b468bcc76f376d52ac86ca6cf3c44b4b.parquet",
+            "latitude": 37.353648040022485,
+            "longitude": -121.93669835581997,
+            "transform": {
+                "rotation": {
+                    "_x": 0.016933696700760302,
+                    "_y": 0.04794294500633178,
+                    "_z": 0.2002288269575034,
+                    "_w": 0.978428914533595
+                },
+                "translation": {
+                    "x": -4.9,
+                    "y": -22.2,
+                    "z": 1.1
+                },
+                "scale": {
+                    "x": 0.94,
+                    "y": 0.94,
+                    "z": 0.94
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 40,
+        "fields": {
+            "name": "d3af8212ae1600f078c4ac1ef3c9369a7f41ee9d005dbd0c545cf43fc35a9a23",
+            "point_cloud_file": "point_clouds/d3af8212ae1600f078c4ac1ef3c9369a7f41ee9d005dbd0c545cf43fc35a9a23.parquet",
+            "latitude": 33.61574775838568,
+            "longitude": 119.08338037301604,
+            "transform": {
+                "rotation": {
+                    "_x": 0.059863316307940805,
+                    "_y": 0.05700008188674566,
+                    "_z": 0.878959918774124,
+                    "_w": 0.4696773735385865
+                },
+                "translation": {
+                    "x": -6.3,
+                    "y": -17.2,
+                    "z": 1.4
+                },
+                "scale": {
+                    "x": 1.06,
+                    "y": 1.06,
+                    "z": 1.06
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 41,
+        "fields": {
+            "name": "d904ae2998f775e4cb1dafe542b8df9706195c1983c4b2d5b2b5c71dcc75570a",
+            "point_cloud_file": "point_clouds/d904ae2998f775e4cb1dafe542b8df9706195c1983c4b2d5b2b5c71dcc75570a.parquet",
+            "latitude": 39.95933993764026,
+            "longitude": -86.15957598159729,
+            "transform": {
+                "rotation": {
+                    "_x": -0.033301805910438936,
+                    "_y": -0.059348715841959665,
+                    "_z": 0.1840572035094851,
+                    "_w": 0.9805568140027799
+                },
+                "translation": {
+                    "x": 2.6,
+                    "y": 1.0,
+                    "z": 1.4
+                },
+                "scale": {
+                    "x": 1.53,
+                    "y": 1.53,
+                    "z": 1.53
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 42,
+        "fields": {
+            "name": "d9b6376623741313bf6da6bf4cdb9828be614a2ce9390ceb3f31cd535d661a75",
+            "point_cloud_file": "point_clouds/d9b6376623741313bf6da6bf4cdb9828be614a2ce9390ceb3f31cd535d661a75.parquet",
+            "latitude": 39.77071967980905,
+            "longitude": -86.15961537301605,
+            "transform": {
+                "rotation": {
+                    "_x": -0.030788667761608646,
+                    "_y": 0.032102515951882626,
+                    "_z": -0.8423521198221573,
+                    "_w": 0.5370888126168165
+                },
+                "translation": {
+                    "x": 8.0,
+                    "y": -16.6,
+                    "z": 1.2
+                },
+                "scale": {
+                    "x": 0.62,
+                    "y": 0.62,
+                    "z": 0.62
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 43,
+        "fields": {
+            "name": "ed16328235c610f15405ff08711eaf15d88a0503884f3a9ccb5a0ee69cb4acb5",
+            "point_cloud_file": "point_clouds/ed16328235c610f15405ff08711eaf15d88a0503884f3a9ccb5a0ee69cb4acb5.parquet",
+            "latitude": 40.43878781721721,
+            "longitude": -79.94789854232798,
+            "transform": {
+                "rotation": {
+                    "_x": -0.10729821879591016,
+                    "_y": -0.01903230751983942,
+                    "_z": -0.31065403438345796,
+                    "_w": 0.9442557568979796
+                },
+                "translation": {
+                    "x": -3.3,
+                    "y": -19.3,
+                    "z": 1.2
+                },
+                "scale": {
+                    "x": 1.39,
+                    "y": 1.39,
+                    "z": 1.39
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 44,
+        "fields": {
+            "name": "ef59aac437132bfc1dd45a7e1f8e4800978e7bb28bf98c4428d26fb3e1da3e90",
+            "point_cloud_file": "point_clouds/ef59aac437132bfc1dd45a7e1f8e4800978e7bb28bf98c4428d26fb3e1da3e90.parquet",
+            "latitude": 39.77397342647845,
+            "longitude": -86.148854271164,
+            "transform": {
+                "rotation": {
+                    "_x": 0.024287523760132344,
+                    "_y": 0.026534090864794302,
+                    "_z": 0.5518337182887841,
+                    "_w": 0.8331780155351884
+                },
+                "translation": {
+                    "x": -0.9,
+                    "y": -25.9,
+                    "z": 0.9
+                },
+                "scale": {
+                    "x": 0.95,
+                    "y": 0.95,
+                    "z": 0.95
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 45,
+        "fields": {
+            "name": "fb3b73f1d3fe9d192f21f55f5100fd258887aef345f778e0a64fc0587930a6f9",
+            "point_cloud_file": "point_clouds/fb3b73f1d3fe9d192f21f55f5100fd258887aef345f778e0a64fc0587930a6f9.parquet",
+            "latitude": 40.43920331339363,
+            "longitude": -79.94802691534402,
+            "transform": {
+                "rotation": {
+                    "_x": 0.04447611479462412,
+                    "_y": -0.0006235429023114802,
+                    "_z": 0.1816808731083272,
+                    "_w": 0.9823510303112735
+                },
+                "translation": {
+                    "x": 1.3,
+                    "y": -18.3,
+                    "z": 1.3
+                },
+                "scale": {
+                    "x": 1.23,
+                    "y": 1.23,
+                    "z": 1.23
+                }
+            }
+        }
+    },
+    {
+        "model": "geoaligner.pointcloudset",
+        "pk": 46,
+        "fields": {
+            "name": "ff592398657b3dfe94153332861985194a3e3c9d199c4a3a27a0ce4038e81ade",
+            "point_cloud_file": "point_clouds/ff592398657b3dfe94153332861985194a3e3c9d199c4a3a27a0ce4038e81ade.parquet",
+            "latitude": 30.494066917578813,
+            "longitude": 114.53415018650801,
+            "transform": {
+                "rotation": {
+                    "_x": 0.0429033229171924,
+                    "_y": 0.011739611392151073,
+                    "_z": 0.07006714635056036,
+                    "_w": 0.9965500897643399
+                },
+                "translation": {
+                    "x": -2.2,
+                    "y": -26.0,
+                    "z": 1.6
+                },
+                "scale": {
+                    "x": 2.43,
+                    "y": 2.43,
+                    "z": 2.43
+                }
+            }
+        }
+    }
+]
