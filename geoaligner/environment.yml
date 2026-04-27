@@ -1,0 +1,13 @@
+name: geoal
+channels:
+ - conda-forge
+dependencies:
+ - Pillow
+ - django
+ - nodejs
+ - numpy
+ - pandas
+ - pyarrow
+ - fastparquet
+ - pytest
+ - pytest-django
