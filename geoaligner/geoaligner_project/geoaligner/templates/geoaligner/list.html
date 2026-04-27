@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Point Cloud Sets</title>
+    <style> body { font-family: sans-serif; padding: 2em; } li { margin-bottom: 1em; } </style>
+</head>
+<body>
+    <h1>Available Point Cloud Alignment Sets</h1>
+    <ul>
+        {% for set in sets %}
+            <li>
+                <a href="{% url 'alignment_view' set.pk %}">{{ set.name }}</a>
+            </li>
+        {% empty %}
+            <li>No sets found. Please add some via the admin interface.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

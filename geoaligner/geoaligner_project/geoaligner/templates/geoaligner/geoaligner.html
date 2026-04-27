@@ -1,0 +1,178 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Aligning: {{ set.name }}</title>
+ <link rel="stylesheet" href="{% static 'geoaligner/js/node_modules/leaflet/dist/leaflet.css' %}" />
+ <style>
+ body { margin: 0; font-family: sans-serif; display: flex; height: 100vh; }
+ #controls { width: 300px; padding: 1em; background: #f4f4f4; overflow-y: auto; }
+ #main-content { flex-grow: 1; display: flex; flex-direction: column; }
+ #map-wrapper { 
+  flex-grow: 1; 
+  position: relative;
+  border-bottom: 2px solid #ccc; 
+  height: 50%;
+  overflow: hidden; 
+ }
+ #map-container { 
+  width: 100%; 
+  height: 100%;
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+  transform-origin: center center;
+ }
+ #overlay-canvas { 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  z-index: 401;
+  pointer-events: none;
+ }
+ #scene-3d-wrapper {
+  flex-grow: 1;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+ }
+ #scene-3d-top-down, #scene-3d-frontal {
+  width: 50%;
+  height: 100%;
+  position: relative; /* Needed for resize observer */
+ }
+ #scene-3d-top-down {
+  border-right: 2px solid #ccc;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+ }
+ #scene-3d-frontal {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+ }
+  #save-button {
+    display: flex;
+    padding: 5px;
+    cursor: pointer;
+    gap: 5px;
+    flex-direction: column;
+    border: 1px solid #000;
+    background-color: #afa;
+  }
+  #image-view-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  #image-view-buttons button {
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #fff;
+  }
+  #image-view-buttons button:hover {
+    background-color: #e9e9e9;
+  }
+ .control-group { margin-bottom: 1em; }
+ label { display: block; margin-bottom: 0.2em; }
+ input[type="range"] { width: 100%; }
+ </style>
+</head>
+<body data-object-id="{{ set.pk }}" data-csrf-token="{{ csrf_token }}">
+
+ <div id="controls">
+ <h2>Controls for {{ set.name }}</h2>
+ <h6><a id="gmap_link" href="">Google Maps</a></h6>
+ <div id="layer-switcher">
+     <h3>Select Map Layer:</h3>
+     <label>
+         <input type="radio" name="map-layer" value="current" checked>
+         Current World Imagery
+     </label>
+     <br>
+     <label>
+         <input type="radio" name="map-layer" value="vintage1">
+         Vintage World Imagery (2014-02-20)
+     </label>
+     <br>
+     <label>
+         <input type="radio" name="map-layer" value="vintage2">
+         Vintage World Imagery (2018-06-06)
+     </label>
+ </div>
+
+ <div class="control-group">
+  <h3>Translation</h3>
+  <label>X: <span id="tx_val">0</span></label><input type="range" id="tx" min="-200" max="200" value="0" step="0.1">
+  <label>Y: <span id="ty_val">0</span></label><input type="range" id="ty" min="-200" max="200" value="0" step="0.1">
+  <label>Z: <span id="tz_val">0</span></label><input type="range" id="tz" min="-10" max="10" value="0" step="0.1">
+ </div>
+ <div class="control-group">
+  <h3>Rotation (Degrees)</h3>
+  <label>RX: <span id="rx_val">0</span></label><input type="range" id="rx" min="-360" max="360" value="0" step="1">
+  <label>RY: <span id="ry_val">0</span></label><input type="range" id="ry" min="-360" max="360" value="0" step="1">
+  <label>RZ: <span id="rz_val">0</span></label><input type="range" id="rz" min="-360" max="360" value="0" step="1">
+ </div>
+ <div class="control-group">
+  <h3>Scale</h3>
+  <label>Uniform Scale: <span id="s_val">1</span></label><input type="range" id="s" min="0.01" max="20" value="1" step="0.01">
+ </div>
+
+  <!-- --- NEW CONTROL GROUP --- -->
+  <div class="control-group">
+    <h3>Point Cloud View Controls</h3>
+    <div id="image-view-buttons">
+      <!-- Dynamically populated by JavaScript -->
+    </div>
+    <br>
+    <label>Point Size: <span id="point_size_val">0.1</span></label>
+    <input type="range" id="point_size" min="0.01" max="3.0" value="0.1" step="0.01">
+    <br><br>
+    <label style="display: inline-flex; align-items: center; font-weight: normal;">
+      <input type="checkbox" id="toggle-background-image" checked style="margin-right: 5px;"> Show Background Image
+    </label>
+  </div>
+  <!-- --- END NEW CONTROL GROUP --- -->
+
+ <div class="control-group">
+  <h3>Satellite View Controls</h3>
+  <label>Satellite Zoom: <span id="map_zoom_val">1.0x</span></label>
+  <input type="range" id="map_zoom_slider" min="1" max="8" value="1" step="0.1">
+  <br><br>
+  <label style="display: inline-flex; align-items: center; font-weight: normal;">
+    <input type="checkbox" id="toggle-points-checkbox" checked style="margin-right: 5px;"> Show Points on Map
+  </label>
+ </div>
+
+ <br>
+ <div id="save-button">
+  <button id="save-button">Save Transformation</button>
+ </div>
+ <p id="save-status"></p>
+ </div>
+
+ <div id="main-content">
+ <div id="map-wrapper">
+  <div id="map-container"></div>
+  <canvas id="overlay-canvas"></canvas>
+ </div>
+  <div id="scene-3d-wrapper">
+   <div id="scene-3d-top-down" title="Top-Down View"></div>
+   <div id="scene-3d-frontal" title="Frontal View"></div>
+  </div>
+ </div>
+
+ <script type="importmap">
+ {
+ "imports": {
+  "three": "{% static 'geoaligner/js/node_modules/three/build/three.module.js' %}",
+  "three/addons/": "{% static 'geoaligner/js/node_modules/three/examples/jsm/' %}",
+  "leaflet": "{% static 'geoaligner/js/node_modules/leaflet/dist/leaflet-src.esm.js' %}"
+ }
+ }
+ </script>
+ <script type="module" src="{% static 'geoaligner/js/geoaligner.js' %}"></script>
+</body>
+</html>
