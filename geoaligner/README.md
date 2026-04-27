@@ -77,18 +77,18 @@ Alternatively, you can use dumpdata command:
 ### To populate the point cloud database using a script:
 You can add commands in `geoaligner/management/commands/` folder to be able to run them with `python manage.py`.
 
-Currently, there is `add_dl3dv_benchmark_localizable.py` file with the command to populate DB with localizable scenes of DL3DV Benchmark dataset. You will need CSV file with lat/lon data,
-you can save the CSV of the IS_LOCALATION_FOUND tab of [this spreadsheet](https://docs.google.com/spreadsheets/d/1w8KPjHcdIvWpvot1XGgI5YMq0LhbjcXbPJtfsYC-NPs/edit?gid=678905690#gid=678905690).
-
+Currently, there are two commands:
+- `add_dl3dv_benchmark_localizable.py` file with the command to populate DB with localizable scenes of DL3DV Benchmark dataset. You will need CSV file with lat/lon data stored in data/DL3DV-Benchmark/dl3dv.csv
+- `add_tanks_and_temples_outdoor.py` file with the command to populate DB with localizable scenes of Tanks and Temples dataset. You will need json file with lat/lon data stored in data/tanks_and_temples_outdoor/lat_lon.json
 
 Here is an example of running it:
 ```
 python manage.py add_dl3dv_benchmark_localizable \
-    --dl3dv_csv_path /Users/daniyar/Downloads/dl3dv/DL3DV-Benchmark\ -\ IS_LOCATION_FOUND.csv \
-    --dataset_path /Users/daniyar/Downloads/dl3dv/DL3DV-10K-Benchmark_localizable \
+    --dl3dv_csv_path /Users/daniyar/cross-view-splatter/data/DL3DV-Benchmark/dl3dv.csv \
+    --dataset_path /Users/daniyar/datasets/dl3dv/ \
     --scene 0a485338bbdaf19ba9090b874bb36ef0599a9c9a475a382c22903cf5981c6ea6 \
-    --images /Users/daniyar/Downloads/dl3dv/DL3DV-10K-Benchmark_localizable/0a485338bbdaf19ba9090b874bb36ef0599a9c9a475a382c22903cf5981c6ea6/gaussian_splat/images_4/frame_00001.png \
-             /Users/daniyar/Downloads/dl3dv/DL3DV-10K-Benchmark_localizable/0a485338bbdaf19ba9090b874bb36ef0599a9c9a475a382c22903cf5981c6ea6/gaussian_splat/images_4/frame_00267.png
+    --images /Users/daniyar/datasets/dl3dv/0a485338bbdaf19ba9090b874bb36ef0599a9c9a475a382c22903cf5981c6ea6/gaussian_splat/images_4/frame_00001.png \
+             /Users/daniyar/datasets/dl3dv/0a485338bbdaf19ba9090b874bb36ef0599a9c9a475a382c22903cf5981c6ea6/gaussian_splat/images_4/frame_00267.png
 ```
 
 ## Coordinate Conventions
