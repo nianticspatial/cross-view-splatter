@@ -23,8 +23,9 @@ the undistorted full resolution, about 3800x2130, slightly different per scene).
 nothing else is needed to reproduce our setup.
 
 Frames are listed in sorted filename order, restricted to the files that have a COLMAP pose. Two scenes have gaps:
-`286239bd…` lacks `frame_00220.png`, and `d9b63766…` has no pose for frames 209–212. Because of this, `index` is not
-always `frame number - 1`; always resolve indices through the `frames` list (or use the `*_files` entries of the splits).
+`286239bd…` has no files for frames 220, 274, 275, 295 and 310–312, and `d9b63766…` has files but no COLMAP pose for
+frames 209–212. Because of this, `index` is not always `frame number - 1`; always resolve indices through the `frames`
+list (or use the `*_files` entries of the splits).
 
 ## Camera JSON format
 
