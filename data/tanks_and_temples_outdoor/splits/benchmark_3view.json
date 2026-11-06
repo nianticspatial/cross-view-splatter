@@ -1,0 +1,142 @@
+{
+  "Horse": {
+    "context": [
+      0,
+      61,
+      3
+    ],
+    "target": [
+      57,
+      62,
+      114,
+      140
+    ],
+    "overlap": 0.5189
+  },
+  "Francis": {
+    "context": [
+      0,
+      119,
+      7
+    ],
+    "target": [
+      107,
+      128,
+      265,
+      296
+    ],
+    "overlap": 0.498
+  },
+  "Family": {
+    "context": [
+      0,
+      77,
+      5
+    ],
+    "target": [
+      73,
+      78,
+      135,
+      141
+    ],
+    "overlap": 0.646
+  },
+  "Lighthouse": {
+    "context": [
+      0,
+      11,
+      171
+    ],
+    "target": [
+      15,
+      30,
+      187,
+      222
+    ],
+    "overlap": 0.3891
+  },
+  "Playground": {
+    "context": [
+      0,
+      5,
+      4
+    ],
+    "target": [
+      10,
+      163,
+      168,
+      178
+    ],
+    "overlap": 0.6725
+  },
+  "Temple": {
+    "context": [
+      0,
+      6,
+      7
+    ],
+    "target": [
+      214,
+      235,
+      255,
+      260
+    ],
+    "overlap": 0.468
+  },
+  "Barn": {
+    "context": [
+      0,
+      3,
+      14
+    ],
+    "target": [
+      5,
+      10,
+      15,
+      182
+    ],
+    "overlap": 0.6166
+  },
+  "Courthouse": {
+    "context": [
+      0,
+      1015,
+      1028
+    ],
+    "target": [
+      35,
+      502,
+      542,
+      1045
+    ],
+    "overlap": 0.7451
+  },
+  "Ignatius": {
+    "context": [
+      0,
+      56,
+      54
+    ],
+    "target": [
+      10,
+      207,
+      257,
+      262
+    ],
+    "overlap": 0.5603
+  },
+  "Truck": {
+    "context": [
+      0,
+      9,
+      201
+    ],
+    "target": [
+      51,
+      128,
+      138,
+      194
+    ],
+    "overlap": 0.6047
+  }
+}

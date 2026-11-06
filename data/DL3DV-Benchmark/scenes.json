@@ -1,0 +1,362 @@
+[
+ {
+  "scene": "032dee9fb0a8bc1b90871dc5fe950080d0bcd3caf166447f44e60ca50ac04ec7",
+  "place": "Birch Bayh Federal Building",
+  "latitude": 39.77039143420219,
+  "longitude": -86.15664454232798,
+  "num_frames": 319,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "073f5a9b983ced6fb28b23051260558b165f328a16b2d33fe20585b7ee4ad561",
+  "place": "Phipps Conservatory and Botanical Gardens",
+  "latitude": 40.43884398282199,
+  "longitude": -79.947518,
+  "num_frames": 410,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "0a485338bbdaf19ba9090b874bb36ef0599a9c9a475a382c22903cf5981c6ea6",
+  "place": "Indianapolis City Market",
+  "latitude": 39.76898119072101,
+  "longitude": -86.15382762698395,
+  "num_frames": 334,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "0bfdd020cf475b9c68e4b469d1d1a2d0cad303eefe8b78fb2307855afdaac8be",
+  "place": "Indiana Statehouse",
+  "latitude": 39.76768694668058,
+  "longitude": -86.162682271164,
+  "num_frames": 410,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "1264931635e127fb905c8953cbc2deadd0c763e633af7fbd9405a61ca849710c",
+  "place": "Oldfields\u2013Lilly House & Gardens",
+  "latitude": 39.82772383154713,
+  "longitude": -86.18580600000001,
+  "num_frames": 347,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "15ff83e2531668d27c92091c97d31401ce323e24ee7c844cb32d5109ab9335f7",
+  "place": "Indian Convention Center",
+  "latitude": 39.764934951954636,
+  "longitude": -86.16208554232797,
+  "num_frames": 353,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "165f5af8bfe32f70595a1c9393a6e442acf7af019998275144f605b89a306557",
+  "place": "UIC Grant Hall",
+  "latitude": 41.87326575689428,
+  "longitude": -87.64936710185205,
+  "num_frames": 335,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "1d6a9ed47cce39fd1c4d18f776bcc97e507b81bde921ca596bd91b0b02b5e414",
+  "place": "White River State Park",
+  "latitude": 39.765861909565,
+  "longitude": -86.17562783393579,
+  "num_frames": 318,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "26fd23358fa11fff0fb3180ef0b65591b486e20dcf753ce4a7aae49a37e370c7",
+  "place": "Wuhan Energy Flower Building",
+  "latitude": 30.494126407190222,
+  "longitude": 114.532946728836,
+  "num_frames": 317,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "286239bd0d4436b747987c40f8cbfc0675bb69435d4ab19a3f73b9d816d0c09a",
+  "place": "Indianapolis Train Station",
+  "latitude": 39.763023697323675,
+  "longitude": -86.15842545767201,
+  "num_frames": 399,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "2991a75d1f0fb2b7a891d424fc2459bb954b61599b52e74a056a7acfb2998b77",
+  "place": "Soldiers & Sailors Monument",
+  "latitude": 39.76864817765219,
+  "longitude": -86.15875710185203,
+  "num_frames": 367,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "3b16a10ec9b4ab71580958b634485a979ffd6df0d368dbbf6fc1c5ffacf46b7a",
+  "place": "Indiana Convention Center",
+  "latitude": 39.76441095295881,
+  "longitude": -86.16189427116402,
+  "num_frames": 414,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "3bb894d1933f3081134ad2d40e54de5f0636bd8b502b0a8561873bb63b0dce85",
+  "place": "Stout's Footwear",
+  "latitude": 39.771797230864706,
+  "longitude": -86.15356080086516,
+  "num_frames": 342,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "4ae797d07b6d1644c9db6919c8cc8c0d28d72be45108ac7a3abf8dc21b599d83",
+  "place": "Fifth Third Bank",
+  "latitude": 39.77082665227737,
+  "longitude": -86.15949336569857,
+  "num_frames": 333,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "513e4ea2e8477b06f2b32417d5c243aec71d491cb0596a60e9fe304c635f20a1",
+  "place": "Indiana Statehouse",
+  "latitude": 39.76878617730507,
+  "longitude": -86.16188172883598,
+  "num_frames": 352,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "54bf355ca7e08ed1bc86f5772e564ac0f92981ca25dab24d86b694e915fc4c43",
+  "place": "IU Health North Hospital",
+  "latitude": 39.95884757958648,
+  "longitude": -86.16012354232798,
+  "num_frames": 370,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "565553aa894be621e8b4773cac288e60ad0c2cf7edb621be62b348c9a0f78380",
+  "place": "Indianapolis City Market",
+  "latitude": 39.768667670730935,
+  "longitude": -86.15250727116401,
+  "num_frames": 364,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "5a69d1027b477be4d2933b765723d57b272e0ace96be7885306464d54aa2c038",
+  "place": "Hudnut Commons",
+  "latitude": 39.7663886770095,
+  "longitude": -86.16269337301604,
+  "num_frames": 344,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "6d221625614d0515fa44d59a8797a49b64f86bc775e66be22f07a66aa0a0cb3a",
+  "place": "Indiana State Museum",
+  "latitude": 39.767876919569545,
+  "longitude": -86.17006364418002,
+  "num_frames": 402,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "6d81c5ab0d480fd43d78b75ff372a8113ad38e2c03f1d69627c009883054d4c2",
+  "place": "Mission College, Santa Clara",
+  "latitude": 37.39135405518417,
+  "longitude": -121.98269191534402,
+  "num_frames": 439,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "7a9f97660be8f2421b37dd413c898360532f17c6447c11515e8aded2d80eb99d",
+  "place": "Indiana State Museum",
+  "latitude": 39.76853047836691,
+  "longitude": -86.16945085338365,
+  "num_frames": 315,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "85cd0e92110bcd35e826cbff16bb0e85d8117717adaf36f0698920f0fb9b2cfd",
+  "place": "Indiana Convention Center",
+  "latitude": 39.76578819722282,
+  "longitude": -86.166426271164,
+  "num_frames": 402,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "8b9fb9d9f10e8c64d5034be69809465753b8ba88ef12da82afd47d38ee789934",
+  "place": "Indianapolis Zoo",
+  "latitude": 39.76708448721207,
+  "longitude": -86.17878091365104,
+  "num_frames": 307,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "946f49be73928469000baa5ca04d2573137c5ee6a66362bcf8d130354dca8924",
+  "place": "Phipps Conservatory and Botanical Gardens",
+  "latitude": 40.43910181072042,
+  "longitude": -79.94742345767202,
+  "num_frames": 314,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "9c8c0e0fadd97abf60088f667eba058ef077a71a8c0f5a4eff2782aa97f1ceb8",
+  "place": "Hudnut Commons",
+  "latitude": 39.76647792359128,
+  "longitude": -86.16264610185205,
+  "num_frames": 399,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "adb95f29c15b8a89e40c17d10596679be09d7719c6f08a453facd506d056ea8b",
+  "place": "Lucas Oil Stadium",
+  "latitude": 39.759089715451076,
+  "longitude": -86.15877054232796,
+  "num_frames": 349,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "b3bf9079b442c681749f6bd95cfb0659c6d844f2228b2f4fa4b602a0e3627b9a",
+  "place": "Fifth Third Bank",
+  "latitude": 39.771232432388835,
+  "longitude": -86.159651,
+  "num_frames": 367,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "c076929db6501cf7ebe386c70e6d77ea3af844a745e794f2ec17c981c465a69b",
+  "place": "Lianhua Temple in Wuhan",
+  "latitude": 30.40717206193347,
+  "longitude": 114.39005745767201,
+  "num_frames": 383,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "c37109a55effe0000f8e40652ca935376e75bcb2a0b56de8eabd20a26e2a0f68",
+  "place": "Shanghai Botanical Garden",
+  "latitude": 31.14798864226155,
+  "longitude": 121.436461271164,
+  "num_frames": 348,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "c37726ce770ac50a2cf5c0f43022f0268e26da0d777cd8e3a3418c4eed03fd94",
+  "place": "Condado Tacos",
+  "latitude": 39.77535414383796,
+  "longitude": -86.14905108465597,
+  "num_frames": 324,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "cc08c0bdc34ddd2867705d0b17a86ec2a9d7c7926ce99070ed1fdc66a812de07",
+  "place": "Newfields",
+  "latitude": 39.8255090755427,
+  "longitude": -86.18509799999998,
+  "num_frames": 326,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "cd9c981eeb4a9091547af19181b382698e9d9eee0a838c7c9783a8a268af6aee",
+  "place": "Hyde Park Prime Steakhouse",
+  "latitude": 39.7686041914887,
+  "longitude": -86.15971581349197,
+  "num_frames": 306,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "d3812aad538261e7f73c75762ff55f23b468bcc76f376d52ac86ca6cf3c44b4b",
+  "place": "Santa Clara Caltrain Station",
+  "latitude": 37.353648040022485,
+  "longitude": -121.93669835581997,
+  "num_frames": 404,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "d3af8212ae1600f078c4ac1ef3c9369a7f41ee9d005dbd0c545cf43fc35a9a23",
+  "place": "China Journey to the West Museum in Huaian",
+  "latitude": 33.61574775838568,
+  "longitude": 119.08338037301604,
+  "num_frames": 314,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "d904ae2998f775e4cb1dafe542b8df9706195c1983c4b2d5b2b5c71dcc75570a",
+  "place": "IU Health North Hospital, Roof Garden",
+  "latitude": 39.95933993764026,
+  "longitude": -86.15957598159729,
+  "num_frames": 401,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "d9b6376623741313bf6da6bf4cdb9828be614a2ce9390ceb3f31cd535d661a75",
+  "place": "Fifth Third Bank",
+  "latitude": 39.77071967980905,
+  "longitude": -86.15961537301605,
+  "num_frames": 407,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "ed16328235c610f15405ff08711eaf15d88a0503884f3a9ccb5a0ee69cb4acb5",
+  "place": "Phipps Conservatory and Botanical Gardens",
+  "latitude": 40.43878781721721,
+  "longitude": -79.94789854232798,
+  "num_frames": 359,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "ef59aac437132bfc1dd45a7e1f8e4800978e7bb28bf98c4428d26fb3e1da3e90",
+  "place": "Harlan-Hoffman House",
+  "latitude": 39.77397342647845,
+  "longitude": -86.148854271164,
+  "num_frames": 307,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "fb3b73f1d3fe9d192f21f55f5100fd258887aef345f778e0a64fc0587930a6f9",
+  "place": "Phipps Conservatory and Botanical Gardens",
+  "latitude": 40.43920331339363,
+  "longitude": -79.94802691534402,
+  "num_frames": 375,
+  "width": 960,
+  "height": 540
+ },
+ {
+  "scene": "ff592398657b3dfe94153332861985194a3e3c9d199c4a3a27a0ce4038e81ade",
+  "place": "Wuhan Energy Flower Building",
+  "latitude": 30.494066917578813,
+  "longitude": 114.53415018650801,
+  "num_frames": 396,
+  "width": 960,
+  "height": 540
+ }
+]
