@@ -14,7 +14,6 @@ import argparse
 import collections
 import csv
 import json
-import os
 import struct
 from pathlib import Path
 
@@ -23,11 +22,24 @@ from scipy.spatial.transform import Rotation
 
 HERE = Path(__file__).resolve().parent
 
-TANDT_SCENES = ["Barn", "Courthouse", "Family", "Francis", "Horse", "Ignatius", "Lighthouse", "Playground", "Temple", "Truck"]
+TANDT_SCENES = [
+    "Barn",
+    "Courthouse",
+    "Family",
+    "Francis",
+    "Horse",
+    "Ignatius",
+    "Lighthouse",
+    "Playground",
+    "Temple",
+    "Truck",
+]
 
 # DL3DV COLMAP models were aligned in the geoaligner after this axis change (x, y, z) -> (x, z, -y),
 # i.e. the published DL3DV transform expects points in that frame. Tanks and Temples does not need it.
-DL3DV_PRE_TRANSFORM = np.array([[1, 0, 0, 0], [0, 0, 1, 0], [0, -1, 0, 0], [0, 0, 0, 1]], dtype=np.float64)
+DL3DV_PRE_TRANSFORM = np.array(
+    [[1, 0, 0, 0], [0, 0, 1, 0], [0, -1, 0, 0], [0, 0, 0, 1]], dtype=np.float64
+)
 
 CONVENTIONS = {
     "world_to_camera": "4x4 OpenCV extrinsic (camera x right, y down, z forward) mapping COLMAP world points to camera: "
@@ -52,7 +64,13 @@ def _read_next_bytes(fid, num_bytes, fmt):
 
 
 def read_cameras_bin(path: Path) -> dict[int, Camera]:
-    models = {0: ("SIMPLE_PINHOLE", 3), 1: ("PINHOLE", 4), 2: ("SIMPLE_RADIAL", 4), 3: ("RADIAL", 5), 4: ("OPENCV", 8)}
+    models = {
+        0: ("SIMPLE_PINHOLE", 3),
+        1: ("PINHOLE", 4),
+        2: ("SIMPLE_RADIAL", 4),
+        3: ("RADIAL", 5),
+        4: ("OPENCV", 8),
+    }
     cameras = {}
     with open(path, "rb") as fid:
         (num,) = _read_next_bytes(fid, 8, "Q")
@@ -79,13 +97,17 @@ def read_images_bin(path: Path) -> dict[int, Image]:
                 name += c
             (n_pts,) = _read_next_bytes(fid, 8, "Q")
             fid.read(24 * n_pts)
-            images[image_id] = Image(image_id, np.array(qvec), np.array(tvec), camera_id, name.decode())
+            images[image_id] = Image(
+                image_id, np.array(qvec), np.array(tvec), camera_id, name.decode()
+            )
     return images
 
 
 def qvec_tvec_to_w2c(qvec_wxyz, tvec) -> np.ndarray:
     w2c = np.eye(4)
-    w2c[:3, :3] = Rotation.from_quat([qvec_wxyz[1], qvec_wxyz[2], qvec_wxyz[3], qvec_wxyz[0]]).as_matrix()
+    w2c[:3, :3] = Rotation.from_quat(
+        [qvec_wxyz[1], qvec_wxyz[2], qvec_wxyz[3], qvec_wxyz[0]]
+    ).as_matrix()
     w2c[:3, 3] = tvec
     return w2c
 
@@ -103,11 +125,20 @@ def load_geo(path: Path) -> dict[str, dict]:
     out = {}
     for item in json.load(open(path)):
         f = item["fields"]
-        q, t, s = f["transform"]["rotation"], f["transform"]["translation"], f["transform"]["scale"]["x"]
+        q, t, s = (
+            f["transform"]["rotation"],
+            f["transform"]["translation"],
+            f["transform"]["scale"]["x"],
+        )
         T = np.eye(4)
         T[:3, :3] = Rotation.from_quat([q["_x"], q["_y"], q["_z"], q["_w"]]).as_matrix() * s
         T[:3, 3] = [t["x"], t["y"], t["z"]]
-        out[f["name"]] = {"T": T, "scale": s, "latitude": f["latitude"], "longitude": f["longitude"]}
+        out[f["name"]] = {
+            "T": T,
+            "scale": s,
+            "latitude": f["latitude"],
+            "longitude": f["longitude"],
+        }
     return out
 
 
@@ -151,7 +182,9 @@ def sanity(frames: list[dict], scene: str) -> None:
     ups = -c2w[:, :3, 1]  # OpenCV camera -y is up
     z = c2w[:, 2, 3]
     err = np.abs(np.einsum("nij,nkj->nik", c2w[:, :3, :3], c2w[:, :3, :3]) - np.eye(3)).max()
-    print(f"{scene:66s} n={len(frames):4d}  mean_up={np.round(ups.mean(0), 2)}  z[m] med={np.median(z):5.2f}  orthoerr={err:.1e}")
+    print(
+        f"{scene:66s} n={len(frames):4d}  mean_up={np.round(ups.mean(0), 2)}  z[m] med={np.median(z):5.2f}  orthoerr={err:.1e}"
+    )
 
 
 # ----------------------------------------------------------------------------- Tanks and Temples
@@ -168,7 +201,9 @@ def export_tandt(root: Path, out_dir: Path) -> None:
     summary = []
     for scene in TANDT_SCENES:
         g = geo[scene]
-        cam_files = sorted(p for p in (root / scene / "cams").iterdir() if p.name.endswith("_cam.txt"))
+        cam_files = sorted(
+            p for p in (root / scene / "cams").iterdir() if p.name.endswith("_cam.txt")
+        )
         names = [f"images/{p.name.replace('_cam.txt', '.jpg')}" for p in cam_files]
         Ks, w2cs = zip(*(read_cam_txt(p) for p in cam_files))
         assert all(np.allclose(K, Ks[0]) for K in Ks), scene
@@ -181,7 +216,10 @@ def export_tandt(root: Path, out_dir: Path) -> None:
             by_name = {im.name: im for im in read_images_bin(colmap_images).values()}
             for name, w2c in zip(names, w2cs):
                 im = by_name[Path(name).name]
-                assert np.allclose(qvec_tvec_to_w2c(im.qvec, im.tvec), w2c, atol=1e-4), (scene, name)
+                assert np.allclose(qvec_tvec_to_w2c(im.qvec, im.tvec), w2c, atol=1e-4), (
+                    scene,
+                    name,
+                )
         frames = []
         for i, (name, w2c) in enumerate(zip(names, w2cs)):
             q, t = w2c_to_qvec_tvec(w2c)
@@ -206,16 +244,31 @@ def export_tandt(root: Path, out_dir: Path) -> None:
             "colmap_to_enu": _r(g["T"]),
             "scale_colmap_to_metres": g["scale"],
             "cameras": {
-                "1": {"model": "PINHOLE", "width": width, "height": height,
-                      "fx": _r(K[0, 0]), "fy": _r(K[1, 1]), "cx": _r(K[0, 2]), "cy": _r(K[1, 2])}
+                "1": {
+                    "model": "PINHOLE",
+                    "width": width,
+                    "height": height,
+                    "fx": _r(K[0, 0]),
+                    "fy": _r(K[1, 1]),
+                    "cx": _r(K[0, 2]),
+                    "cy": _r(K[1, 2]),
+                }
             },
             "frames": frames,
             "benchmark_splits": load_splits(split_dir, scene, names),
         }
         write_scene(out_dir / f"{scene}.json", payload)
         sanity(frames, scene)
-        summary.append({"scene": scene, "latitude": g["latitude"], "longitude": g["longitude"],
-                        "num_frames": len(frames), "width": width, "height": height})
+        summary.append(
+            {
+                "scene": scene,
+                "latitude": g["latitude"],
+                "longitude": g["longitude"],
+                "num_frames": len(frames),
+                "width": width,
+                "height": height,
+            }
+        )
     with open(out_dir.parent / "scenes.json", "w") as f:
         json.dump(summary, f, indent=1)
         f.write("\n")
@@ -239,7 +292,9 @@ def export_dl3dv(root: Path, out_dir: Path) -> None:
         by_name = {im.name: im for im in images.values()}
         img_dir = root / scene / "gaussian_splat" / "images_4"
         on_disk = sorted(p.name for p in img_dir.iterdir() if p.suffix.lower() in (".png", ".jpg"))
-        names = [n for n in on_disk if n in by_name]  # loader convention: sorted files present in COLMAP
+        names = [
+            n for n in on_disk if n in by_name
+        ]  # loader convention: sorted files present in COLMAP
         from PIL import Image as PILImage
 
         w4, h4 = PILImage.open(img_dir / names[0]).size
@@ -256,7 +311,9 @@ def export_dl3dv(root: Path, out_dir: Path) -> None:
                     "qvec_wxyz": _r(im.qvec),
                     "tvec": _r(im.tvec),
                     "world_to_camera": _r(w2c),
-                    "camera_to_world_enu": _r(enu_pose(g["T"] @ DL3DV_PRE_TRANSFORM, g["scale"], w2c)),
+                    "camera_to_world_enu": _r(
+                        enu_pose(g["T"] @ DL3DV_PRE_TRANSFORM, g["scale"], w2c)
+                    ),
                 }
             )
         cams = {}
@@ -264,11 +321,21 @@ def export_dl3dv(root: Path, out_dir: Path) -> None:
             assert cam.model == "PINHOLE", cam
             fx, fy, cx, cy = cam.params
             cams[str(cid)] = {
-                "model": "PINHOLE", "width": cam.width, "height": cam.height,
-                "fx": _r(fx), "fy": _r(fy), "cx": _r(cx), "cy": _r(cy),
-                "images_4": {"width": w4, "height": h4,
-                             "fx": _r(fx * w4 / cam.width), "fy": _r(fy * h4 / cam.height),
-                             "cx": _r(cx * w4 / cam.width), "cy": _r(cy * h4 / cam.height)},
+                "model": "PINHOLE",
+                "width": cam.width,
+                "height": cam.height,
+                "fx": _r(fx),
+                "fy": _r(fy),
+                "cx": _r(cx),
+                "cy": _r(cy),
+                "images_4": {
+                    "width": w4,
+                    "height": h4,
+                    "fx": _r(fx * w4 / cam.width),
+                    "fy": _r(fy * h4 / cam.height),
+                    "cx": _r(cx * w4 / cam.width),
+                    "cy": _r(cy * h4 / cam.height),
+                },
             }
         payload = {
             "dataset": "DL3DV-Benchmark",
@@ -285,15 +352,26 @@ def export_dl3dv(root: Path, out_dir: Path) -> None:
         }
         write_scene(out_dir / f"{scene}.json", payload)
         sanity(frames, scene)
-        summary.append({"scene": scene, "place": places.get(scene, ""), "latitude": g["latitude"],
-                        "longitude": g["longitude"], "num_frames": len(frames), "width": w4, "height": h4})
+        summary.append(
+            {
+                "scene": scene,
+                "place": places.get(scene, ""),
+                "latitude": g["latitude"],
+                "longitude": g["longitude"],
+                "num_frames": len(frames),
+                "width": w4,
+                "height": h4,
+            }
+        )
     with open(out_dir.parent / "scenes.json", "w") as f:
         json.dump(summary, f, indent=1)
         f.write("\n")
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
+    )
     ap.add_argument("dataset", choices=["tandt", "dl3dv"])
     ap.add_argument("--root", type=Path, required=True)
     ap.add_argument("--out", type=Path, default=None, help="output cameras/ directory")
