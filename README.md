@@ -10,6 +10,8 @@
 
 ## News
 
+[2026-11-06] Release per-scene camera poses, benchmark splits and the Tanks and Temples images.
+
 [2026-03-26] Release geolocalized Tanks and Temples and DL3DV dataset information.
 
 
@@ -19,13 +21,41 @@ This repository contains code and data for `Cross-View Splatter`.
 Code coming soon...
 
 ## Geolocalized Benchmark Dataset
-We propose a new task, referred to as "novel-view synthesis with georeferenced images" and construct a suitable benchmark dataset by pairing selected outdoor scenes from Tanks and Temples and DL3DV datasets with orhographic satellite imagery.
-We manually register and 3DoF align satellite images to COLMAP reconstructions for these scenes. In `./data` folder, we release JSON files for Tanks and Temples and DL3DV containing, for each scene, the queried satellite image location (`latitude`, `longitude`) together with an SE(3) transform that maps the COLMAP point cloud into the satellite-aligned reference frame.
+We propose a new task, referred to as "novel-view synthesis with georeferenced images", and construct a suitable benchmark dataset by pairing selected outdoor scenes from Tanks and Temples (10 scenes) and DL3DV (40 scenes) with orthographic satellite imagery.
+We manually registered the COLMAP reconstructions of these scenes to north-up satellite images with the [geoaligner](geoaligner/) tool.
 
-Each JSON entry provides the scene identifier (`name`), the satellite query location (`latitude`, `longitude`), and a `transform` with quaternion rotation, 3D translation, and isotropic scale.
+The `./data` folder contains, per dataset:
+
+| | Tanks and Temples | DL3DV-Benchmark |
+|---|---|---|
+| Per-scene cameras (intrinsics, poses, metric georeferenced poses, splits) | [`data/tanks_and_temples_outdoor/cameras/`](data/tanks_and_temples_outdoor/cameras/) | [`data/DL3DV-Benchmark/cameras/`](data/DL3DV-Benchmark/cameras/) |
+| Benchmark splits (1 / 2 / 3 context views, 4 targets) | [`data/tanks_and_temples_outdoor/splits/`](data/tanks_and_temples_outdoor/splits/) | [`data/DL3DV-Benchmark/splits/`](data/DL3DV-Benchmark/splits/) |
+| Scene list with coordinates | [`scenes.json`](data/tanks_and_temples_outdoor/scenes.json) | [`scenes.json`](data/DL3DV-Benchmark/scenes.json) |
+| Raw geoaligner export (COLMAP -> satellite transform) | [`tanks_and_temples_outdoor_point_cloud_transform_enu.json`](data/tanks_and_temples_outdoor_point_cloud_transform_enu.json) | [`dl3dv_point_cloud_transform_enu.json`](data/dl3dv_point_cloud_transform_enu.json) |
+| Images | Google Drive, see [`data/tanks_and_temples_outdoor/README.md`](data/tanks_and_temples_outdoor/README.md) | official DL3DV-10K Benchmark release |
+| Conventions and protocol | [README](data/tanks_and_temples_outdoor/README.md) | [README](data/DL3DV-Benchmark/README.md) |
+
+Satellite imagery is not redistributed; fetch a north-up raster centred on each scene's `latitude` / `longitude` from the provider of your choice (we use 1024x1024 px at 2 px/m).
+
+### Camera poses
+
+Every `cameras/<scene>.json` lists, per frame, the world-to-camera pose in the COLMAP frame (`qvec_wxyz`, `tvec`, `world_to_camera`) and a metric camera-to-world pose in a local east-north-up frame (`camera_to_world_enu`: x = east, y = north, z = up, origin at the scene's `latitude` / `longitude`, z ≈ 0 at ground level). The 4x4 similarity `colmap_to_enu` relates the two:
+
+```python
+import json, numpy as np
+
+scene = json.load(open("data/tanks_and_temples_outdoor/cameras/Barn.json"))
+T = np.array(scene["colmap_to_enu"])                      # p_enu = T @ p_colmap, 3x3 block = scale * R
+for f in scene["frames"][:3]:
+    w2c = np.array(f["world_to_camera"])                  # OpenCV, COLMAP frame
+    c2w_enu = np.array(f["camera_to_world_enu"])          # metric SE(3), == T @ inv(w2c) with R renormalised
+    print(f["file"], "east/north/up [m]:", c2w_enu[:3, 3])
+```
 
 <details>
-<summary>COLMAP-to-geoaligned transform for a scene entry can be constructed as follows: </summary>
+<summary>Building the transform from the raw geoaligner JSON instead</summary>
+
+The raw export stores a quaternion (`_x, _y, _z, _w`, scalar last), a translation and an isotropic scale; the point cloud is rotated, then scaled, then translated:
 
 ```python
 import json
@@ -33,33 +63,28 @@ import numpy as np
 from scipy.spatial.transform import Rotation as R
 
 def colmap_to_geoaligned(scene):
-	"""Return the 4x4 transform that aligns the COLMAP point cloud to the satellite image at the query location."""
-	transform_data = scene["fields"]["transform"]
-	rot = transform_data["rotation"]
-	trans = transform_data["translation"]
-	scale = transform_data["scale"]["x"]
+	t = scene["fields"]["transform"]
+	q = t["rotation"]
+	T = np.identity(4)
+	T[:3, :3] = R.from_quat([q["_x"], q["_y"], q["_z"], q["_w"]]).as_matrix() * t["scale"]["x"]
+	T[:3, 3] = [t["translation"]["x"], t["translation"]["y"], t["translation"]["z"]]
+	return T
 
-	rot = [rot["_x"], rot["_y"], rot["_z"], rot["_w"]]
-	translation_vec = [trans["x"], trans["y"], trans["z"]]
+# Tanks and Temples: applies directly to COLMAP coordinates.
+scene = json.load(open("data/tanks_and_temples_outdoor_point_cloud_transform_enu.json"))[0]
+T = colmap_to_geoaligned(scene)                                   # p_enu = T @ p_colmap
 
-	colmap2georef = np.identity(4)
-	rotation_matrix_3x3 = R.from_quat(np.array(rot)).as_matrix()
-	colmap2georef[0:3, 0:3] = rotation_matrix_3x3 * scale
-	colmap2georef[0:3, 3] = np.array(translation_vec)
-	return colmap2georef
-
-with open("./data/dl3dv_point_cloud_transform_enu.json", "r") as f:
-	scene_entries = json.load(f)
-
-scene = scene_entries[0]
-colmap2georef = colmap_to_geoaligned(scene)
+# DL3DV: the point clouds were aligned after the axis change (x, y, z) -> (x, z, -y).
+M = np.array([[1, 0, 0, 0], [0, 0, 1, 0], [0, -1, 0, 0], [0, 0, 0, 1]], dtype=float)
+scene = json.load(open("data/dl3dv_point_cloud_transform_enu.json"))[0]
+T = colmap_to_geoaligned(scene) @ M                               # p_enu = T @ p_colmap
 ```
 
 </details>
 
+### Benchmark protocol
 
-
-
+Each scene is evaluated with 1, 2 or 3 context (input) views and 4 held-out target views (`splits/benchmark_{1,2,3}view.json`; indices refer to the `frames` list of the camera JSON, filenames are given alongside). Frame 0 is always a context view; the other context views are the frames with COLMAP co-visibility IoU closest to 0.15 to frame 0, and the targets were chosen (from a uniform 20 % subsample) to have co-visibility IoU closest to 0.1, 0.2, 0.3 and 0.4 with the context set. Images are resized to a short side of 518 px and centre-cropped to 518x518; PSNR, SSIM and LPIPS are reported on the target views.
 
 ## BibTeX
 

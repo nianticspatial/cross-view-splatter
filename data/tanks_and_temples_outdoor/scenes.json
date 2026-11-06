@@ -1,0 +1,82 @@
+[
+ {
+  "scene": "Barn",
+  "latitude": 37.392664142633386,
+  "longitude": -121.96199094611531,
+  "num_frames": 410,
+  "width": 1920,
+  "height": 1080
+ },
+ {
+  "scene": "Courthouse",
+  "latitude": 37.4870631316516,
+  "longitude": -122.22967140561393,
+  "num_frames": 1106,
+  "width": 1920,
+  "height": 1080
+ },
+ {
+  "scene": "Family",
+  "latitude": 37.348499568209384,
+  "longitude": -121.9386443134906,
+  "num_frames": 152,
+  "width": 1920,
+  "height": 1080
+ },
+ {
+  "scene": "Francis",
+  "latitude": 37.77128029232098,
+  "longitude": -122.46659091081595,
+  "num_frames": 302,
+  "width": 1920,
+  "height": 1080
+ },
+ {
+  "scene": "Horse",
+  "latitude": 37.34769446329359,
+  "longitude": -121.93827335999498,
+  "num_frames": 151,
+  "width": 1920,
+  "height": 1080
+ },
+ {
+  "scene": "Ignatius",
+  "latitude": 37.3488883798771,
+  "longitude": -121.94021110597701,
+  "num_frames": 263,
+  "width": 1920,
+  "height": 1080
+ },
+ {
+  "scene": "Lighthouse",
+  "latitude": 36.951457150859845,
+  "longitude": -122.02670723801154,
+  "num_frames": 309,
+  "width": 2048,
+  "height": 1080
+ },
+ {
+  "scene": "Playground",
+  "latitude": 37.393083612936515,
+  "longitude": -121.96214943675402,
+  "num_frames": 307,
+  "width": 1920,
+  "height": 1080
+ },
+ {
+  "scene": "Temple",
+  "latitude": 37.76989160594431,
+  "longitude": -122.46854009594472,
+  "num_frames": 302,
+  "width": 1920,
+  "height": 1080
+ },
+ {
+  "scene": "Truck",
+  "latitude": 37.33689032845215,
+  "longitude": -121.89434365830597,
+  "num_frames": 251,
+  "width": 1920,
+  "height": 1080
+ }
+]
