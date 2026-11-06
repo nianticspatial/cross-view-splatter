@@ -23,7 +23,7 @@ pre-processed set with COLMAP-derived camera poses in MVSNet camera-file format 
 single source of truth and are identical to `colmap/<Scene>/sparse/0`.
 
 Download (images + the original `cams/*_cam.txt` and `pair.txt`, one tar per scene, ~2.1 GB total):
-**[Google Drive folder](https://drive.google.com/drive/folders/1vjCkHnWZNYz-wHSat9gHzR6MoG8XFN-Q)**. Checksums in `SHA256SUMS` next to the archives. Extract into one folder:
+**[Google Drive folder](https://drive.google.com/drive/folders/1sc0TaO8q6XZA-Y63Vty2CHNN2Fgh0tyO)**. The archives are in the `tanks_and_temples_outdoor/` subfolder together with `SHA256SUMS`. Extract into one folder:
 
 ```
 tanks_and_temples_outdoor/
